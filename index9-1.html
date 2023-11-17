@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2b0b5be20f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-header {
+            background: linear-gradient(0deg, #fe70d8, #3713c1);
+        }
+
+        .main-header .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .container a img {
+            width: 100px;
+            border-radius: 200px;
+        }
+
+        .container .main-nav {
+            display: flex;
+            margin: 15px;
+        }
+
+        .container .main-nav:nth-child(2) {
+            margin-right: 50px;
+        }
+
+        .container .main-nav:nth-child(3) {
+            margin-left: 50px;
+        }
+
+        .container .main-nav:first-of-type {
+            order: -1;
+        }
+
+        .container .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 15px;
+            position: relative;
+            transform: translateY(0px);
+            transition: .3s;
+        }
+
+        .container .main-nav a:hover {
+            transform: translateY(-5px);
+        }
+
+        .container .main-nav a::after {
+            content: "";
+            position: absolute;
+            /* 左50%又50%讓定位點在中間，讓hover時能從中間往左右發散 */
+            left: 50%;
+            right: 50%;
+            bottom: -5px;
+            border-bottom: 1px solid #fff;
+            transition: .3s;
+        }
+
+        .container .main-nav a:hover::after {
+            left: 0;
+            right: 0;
+            bottom: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="" class="log">
+                <img src="https://picsum.photos/500/500?random=10" alt="">
+            </a>
+            <nav class="main-nav">
+                <a href="#">金魚都能懂系列</a>
+                <a href="#">暴力網頁入門系列</a>
+            </nav>
+            <nav class="main-nav">
+                <a href="#">CSS可樂系列</a>
+                <a href="#">RWD原來醬子系列</a>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>

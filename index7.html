@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2b0b5be20f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-footer {
+            background: linear-gradient(-20deg, #3f5494, #08c7a5);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container .footer-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-item h4 {
+            margin: 80px 0 15px 0;
+            font-size: 25px;
+            padding-bottom: 15px;
+            color: #fff;
+            border-bottom: 1px dotted #fff;
+        }
+
+        .footer-item nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-item nav a {
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-item nav a:hover {
+            color: #fa0;
+        }
+
+        /* .footer-sub {
+            display: flex;
+            flex-direction: column;
+        } */
+
+        .footer-sub form {
+            display: flex;
+            width: 100%;
+            margin: auto 0px;
+        }
+
+
+        .footer-sub  ,
+        .footer-sub input[type="submit"] {
+            border: none;
+            padding: 5px 10px;
+        }
+
+
+        .footer-sub input[type="text"] {
+            flex-grow: 1;
+            border-radius: 200px 0 0 200px;
+        }
+
+
+        .footer-sub input[type="submit"] {
+            color: #70f6df;
+            background-color: #3e5293;
+            border-radius: 0 200px 200px 0;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 150px;
+            padding-bottom: 15px;
+            color: #70f6df;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>關於暴力課程</h4>
+                <nav>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>課程目標</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>辦學理念</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>課程宗旨</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>課程列表</h4>
+                <nav>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>暴力網頁入門</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>RWD網頁深入理解</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>CSS3互動動畫設計</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>Bootstrap框架實務</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>服務項目</h4>
+                <nav>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>網頁建置顧問</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>網站設計建置</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>網站規劃</a>
+                    <a href=""><i class="fa-solid fa-chevron-right"></i>企業教育訓練</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-sub">
+                <h4>訂閱電子報</h4>
+                <form action="">
+                    <input type="text" name="">
+                    <input type="submit" value="訂閱">
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2019 金魚都能懂得這個網頁畫面怎麼切
+        </div>
+    </div>
+</body>
+
+</html>

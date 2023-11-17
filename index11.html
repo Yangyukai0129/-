@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .wrap {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .item {
+            float: left;
+            position: relative;
+        }
+
+
+        .item img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .item:first-child {
+            width: 50%;
+        }
+
+        .item:first-child~.item {
+            width: 25%;
+        }
+
+        .item .txt {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            color: #fff;
+            box-sizing: border-box;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: hsla(0, 0%, 0%, 0.635);
+            opacity: 0;
+            transition: .5s;
+            transform: scale(0);
+        }
+
+        .item:hover .txt {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        h3 {
+            font-size: 23px;
+            line-height: 1;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/500/500?random=10" alt="">
+            <div class="txt">
+                <h3>Lorem ipsum dolor, sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis excepturi velit blanditiis impedit
+                    maxime dolorem maiores non itaque repellat.</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500?random=20" alt="">
+            <div class="txt">
+                <h3>Lorem ipsum dolor, sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis excepturi velit blanditiis impedit
+                    maxime dolorem maiores non itaque repellat.</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500?random=30" alt="">
+            <div class="txt">
+                <h3>Lorem ipsum dolor, sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis excepturi velit blanditiis impedit
+                    maxime dolorem maiores non itaque repellat.</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500?random=40" alt="">
+            <div class="txt">
+                <h3>Lorem ipsum dolor, sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis excepturi velit blanditiis impedit
+                    maxime dolorem maiores non itaque repellat.</p>
+            </div>
+
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500?random=50" alt="">
+            <div class="txt">
+                <h3>Lorem ipsum dolor, sit amet.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis excepturi velit blanditiis impedit
+                    maxime dolorem maiores non itaque repellat.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

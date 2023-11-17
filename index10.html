@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #562870;
+        }
+
+        .wrap {
+            padding: 10px 0px;
+            background: #ec008b;
+        }
+
+        .breadcrumb {
+            width: 90%;
+            display: flex;
+            margin: auto;
+        }
+
+        .breadcrumb li {
+            padding: 0px 20px;
+        }
+
+        .breadcrumb li+li {
+            padding-left: 0px;
+        }
+
+        .breadcrumb li+li::before {
+            content: ">";
+            color: #fff;
+            margin-right: 20px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .breadcrumb a:hover,
+        .breadcrumb li:last-child a {
+            color: #ff0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ol class="breadcrumb">
+            <li><a href="#">CSS可樂</a></li>
+            <li><a href="#">CSS教學</a></li>
+            <li><a href="#">金魚系列</a></li>
+            <li><a href="#">切版技巧</a></li>
+            <li><a href="#">麵包屑</a></li>
+        </ol>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-color: rgb(32, 32, 172);
+        }
+
+        .wrap {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+
+        .card {
+            width: 368px;
+            margin: 15px;
+            text-align: center;
+            border: 1px solid #000;
+            background-color: #fff;
+            transform: translateY(0px);
+            transition: .5s;
+        }
+
+        .card img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .card .txt {
+            position: relative;
+            transition: .25s;
+        }
+
+        .txt::before {
+            content: '';
+            border-top: 50px solid transparent;
+            border-left: 184px solid #fff;
+            border-right: 184px solid #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+        }
+
+        .card:hover .txt {
+            background: linear-gradient(0deg, #FB8076, #FEB85D);
+            color: #ffffff;
+        }
+
+        .card:hover .txt::before {
+            border-left: 184px solid #FEB85D;
+            border-right: 184px solid #FEB85D;
+        }
+
+        .card:hover {
+            transform: translateY(-50px);
+        }
+
+
+        .txt h2 {
+            border-bottom: 1px solid #c0c0c0;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+
+        .txt p {
+            padding: 5px;
+            line-height: 1.2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <img src="https://picsum.photos/300/300?random=10" alt="">
+            <div class="txt">
+                <h2>Lorem ipsum do</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis amet explicabo beatae fugiat,
+                    molestias tempore exercitationem, dolor reiciendis natus in illo delectus, numquam eveniet
+                    distinctio quisquam fuga quas mollitia et? Officiis exercitationem, eaque deleniti esse repellendus,
+                    deserunt autem ex blanditiis modi dolor nam laboriosam debitis magni eligendi. Culpa, exercitationem
+                    placeat.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/300?random=20" alt="">
+            <div class="txt">
+                <h2>Lorem ipsum do</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis amet explicabo beatae fugiat,
+                    molestias tempore exercitationem, dolor reiciendis natus in illo delectus, numquam eveniet
+                    distinctio quisquam fuga quas mollitia et? Officiis exercitationem, eaque deleniti esse repellendus,
+                    deserunt autem ex blanditiis modi dolor nam laboriosam debitis magni eligendi. Culpa, exercitationem
+                    placeat.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/300/300?random=30" alt="">
+            <div class="txt">
+                <h2>Lorem ipsum do</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis amet explicabo beatae fugiat,
+                    molestias tempore exercitationem, dolor reiciendis natus in illo delectus, numquam eveniet
+                    distinctio quisquam fuga quas mollitia et? Officiis exercitationem, eaque deleniti esse repellendus,
+                    deserunt autem ex blanditiis modi dolor nam laboriosam debitis magni eligendi. Culpa, exercitationem
+                    placeat.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

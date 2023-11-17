@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            background: #0788c4;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            display: flex;
+            width: 368px;
+            margin: 0 15px;
+            border: 1px solid #5f5f5f;
+            background: #ffffff;
+            box-shadow: 0 10px 30px#00334b;
+        }
+
+        .item .pic {
+            width: 50%;
+        }
+
+        .item .pic img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .item .txt {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+
+        .item .txt h2 {
+            font-size: 25px;
+        }
+
+        .item .txt .btn {
+            line-height: 1.5em;
+            border: 1px solid #ccc;
+            padding: 0 1em;
+            align-self: flex-end;
+            text-decoration: none;
+            border-radius: 200px;
+            margin-top: auto;
+            color: #aaa;
+        }
+
+        .item .txt .btn:hover {
+            background-color: #aaa;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/300?random=11"></img>
+                </div>
+                <div class="txt">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores iure ducimus aspernatur nam.
+                        Asperiores magnam sit dolorum dolore aliquid totam.</p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/300?random=12"></img>
+                </div>
+                <div class="txt">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores iure ducimus aspernatur nam.
+                        Asperiores magnam sit dolorum dolore aliquid totam.</p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/300/300?random=13"></img>
+                </div>
+                <div class="txt">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores iure ducimus aspernatur nam.
+                        Asperiores magnam sit dolorum dolore aliquid totam.</p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

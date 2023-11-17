@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    margin: 30px;
+}
+
+.wrap {
+    padding: 10px;
+    width: 520px;
+    margin: 10px 20px;
+    border: 1px solid #ccc;
+    /* 讓使用float的時候高度不會塌陷 */
+    /* overflow: hidden; */
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    padding-bottom: .4em;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.pic {
+    padding-right: 10px;
+}
+
+.pic img {
+    border-radius: 50%;
+}
+
+.sample1 .pic {
+    vertical-align: top;
+}
+
+
+
+
+
+
+
+.sample2 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample2 .text {
+    box-sizing: border-box;
+    float: left;
+    width: 460px;
+}
+
+.sample2::after {
+    content: "";
+    display: block;
+    /* 可能會多一個空格或繼承造成破版，所以預先把高度設為0 */
+    height: 0;
+    clear: both;
+}
+
+
+
+
+
+
+
+.sample3 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample3 .text {
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+
+
+
+
+
+
+.sample4 .pic {
+    width: 40px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.sample4 .text {
+    box-sizing: border-box;
+    /* 讓使用float的時候高度不會塌陷 */
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* 這種做法很爛 */
+.sample5 {
+    position: relative;
+    height: 170px;
+}
+
+.sample5 .pic {
+    position: absolute;
+    width: 30px;
+}
+
+.sample5 .text {
+    position: absolute;
+    width: 460px;
+    left: 50px;
+}
+
+
+
+
+
+
+.sample6 h2 {
+    padding-left: 40px;
+    text-indent: -40px;
+}
+
+.sample6 img {
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.sample6 p {
+    padding-left: 40px;
+}
+
+
+
+
+
+
+.sample7 p {
+    padding-left: 40px;
+}
+
+.sample7 h2 {
+    background: url(https://picsum.photos/30/30?random=10)no-repeat;
+    padding-left: 40px;
+}
+
+
+
+
+
+
+.sample8 {
+    padding-left: 50px;
+}
+
+.sample8 h2 {
+    text-indent: -40px;
+}
+
+.sample8 h2 img {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+.sample9 {
+    display: flex;
+}
+
+.sample9 .pic {
+    flex: 0 0 30px;
+}
+
+.sample9 .text {
+    flex: 1 1 auto;
+}
+
+.sample9 .pic img {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+.sample10 {
+    display: grid;
+    grid-auto-rows: auto 1fr;
+    grid-auto-columns: 40px 1fr;
+    grid-template-areas:
+        "pic title"
+        ". txt";
+}
+
+.sample10 .pic {
+    grid-area: pic;
+}
+
+.sample10 h2 {
+    grid-area: title;
+}
+
+.sample10 .text {
+    grid-area: txt;
+}
+
+
+
+
+
+
+
+.sample11 {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+        "pic txt"
+        ". txt";
+}
+
+.sample11 .pic {
+    grid-area: pic;
+}
+
+.sample11 .text {
+    grid-area: txt;
+}

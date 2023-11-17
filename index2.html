@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+            display: flex;
+        }
+
+        .wrap .card {
+            position: relative;
+            width: 25%;
+        }
+
+        .wrap img {
+            width: 100%;
+            /* 沒加會多一小塊背景色，還不知道原因 */
+            vertical-align: middle;
+        }
+
+        .wrap .txt {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: rgba(0, 0, 0, 0.404);
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .wrap .txt:hover {
+            opacity: 1;
+        }
+
+        .wrap h2 {
+            font-size: 40px;
+            color: rgb(253, 190, 107)
+        }
+
+        .wrap h2::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: aliceblue;
+            transition: .5s .2s;
+            width: 0%;
+        }
+
+        .wrap .txt:hover h2::after {
+            width: 100%;
+        }
+
+        .wrap p {
+            font-size: 25px;
+            color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <img src="https://picsum.photos/500/500?random=10" alt="">
+            <div class="txt">
+                <h2>測試測試</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempore non nam dicta
+                    quibusdam inventore minima id obcaecati. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/500/500?random=20" alt="">
+            <div class="txt">
+                <h2>測試測試</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempore non nam dicta
+                    quibusdam inventore minima id obcaecati. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/500/500?random=30" alt="">
+            <div class="txt">
+                <h2>測試測試</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempore non nam dicta
+                    quibusdam inventore minima id obcaecati. </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/500/500?random=40" alt="">
+            <div class="txt">
+                <h2>測試測試</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore tempore non nam dicta
+                    quibusdam inventore minima id obcaecati. </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
