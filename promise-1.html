@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script>
+        const PENDING = 'pending'
+        const FULFILLED = 'fulfilled'
+        const REJECTED = 'rejected'
+        class HMPromise {
+            state = PENDING
+            result = undefined
+
+            constructor(func) {
+                const resolve = (result) => {
+                    if (this.state == PENDING) {
+                        this.state = FULFILLED
+                        this.result = result
+                    }
+                }
+                const reject = (result) => {
+                    if (this.state == PENDING) {
+                        this.state = REJECTED
+                        this.result = result
+                    }
+                }
+                func(resolve, reject)
+            }
+            then(onFulfilled, onRejected) {
+                onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : x => x
+                onRejected = typeof onRejected === 'function' ? onRejected : x => { throw x }
+
+                if (this.state === FULFILLED) {
+                    onFulfilled(this.result)
+                }
+                else if (this.state === REJECTED) {
+                    onRejected(this.result)
+                }
+            }
+        }
+
+        const p = new HMPromise((resolve, reject) => {
+            console.log('執行拉')
+            // resolve('success')
+            reject('error')
+        })
+
+        // p.then(res => {
+        //     console.log('成功回調', res)
+        // }), err(res => {
+        //     console.log('失敗回調', res)
+        // })
+        p.then(res => {
+            console.log('成功回調', res)
+        })
+    </script>
+</body>
+
+</html>
